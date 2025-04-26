@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tetris Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add iOS specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="assets/images/tetris-icon.png">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-area">
+            <canvas id="tetris-canvas"></canvas>
+        </div>
+        
+        <div id="game-info">
+            <div id="score">Score: <span>0</span></div>
+            <div id="level">Level: <span>1</span></div>
+            <div id="lines">Lines: <span>0</span></div>
+        </div>
+
+        <div id="mobile-controls">
+            <div id="direction-pad">
+                <button id="left-btn">←</button>
+                <button id="right-btn">→</button>
+                <button id="down-btn">↓</button>
+            </div>
+            <div id="action-buttons">
+                <button id="rotate-btn">Rotate</button>
+                <button id="drop-btn">Drop</button>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h2>Tetris Pro</h2>
+            <button id="start-btn">Start Game</button>
+            <button id="leaderboard-btn">Leaderboard</button>
+            <button id="quit-btn">Quit</button>
+        </div>
+
+        <div id="save-score" class="hidden">
+            <h2>Game Over</h2>
+            <p>Your Score: <span class="final-score">0</span></p>
+            <div class="save-controls">
+                <input type="text" id="player-name" placeholder="Enter your name" maxlength="10">
+                <div class="save-buttons">
+                    <button id="save-yes">Save (Y)</button>
+                    <button id="save-no">Don't Save (N)</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="leaderboard" class="hidden">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-entries"></div>
+            <button id="close-leaderboard">Close</button>
+        </div>
+    </div>
+
+    <script src="js/tetris.js" type="module"></script>
+</body>
+</html> 
